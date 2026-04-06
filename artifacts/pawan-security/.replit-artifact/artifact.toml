@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Pawan Security Solution"
+version = "1.0.0"
+id = "artifacts/pawan-security"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25222
+
+[services.development]
+run = "pnpm --filter @workspace/pawan-security run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pawan-security", "run", "build" ]
+publicDir = "artifacts/pawan-security/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25222"
+BASE_PATH = "/"

@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "IgG9Z0O0bdJNZTtOO0TyB"
+uri = "file://artifacts/pawan-security/public/hero-bg.png"
+type = "image"
+title = "Hero banner CCTV camera"
+
+[[generated]]
+id = "eLXE4FgXOiIMImxny9T6I"
+uri = "file://artifacts/pawan-security/public/about-bg.png"
+type = "image"
+title = "About us security monitoring"
+
+[[generated]]
+id = "TlXENNHAK1_cV44ZmHhJt"
+uri = "file://artifacts/pawan-security/public/service-install.png"
+type = "image"
+title = "Service CCTV Installation"
+
+[[generated]]
+id = "snsAbRSwV49G57FWNclVx"
+uri = "file://artifacts/pawan-security/public/service-repair.png"
+type = "image"
+title = "CCTV repair technician"
+
+[[generated]]
+id = "zv68fsMCiMEv1ildNvOvz"
+uri = "file://artifacts/pawan-security/public/service-amc.png"
+type = "image"
+title = "AMC Maintenance security"
+
+[[generated]]
+id = "S_LesKlsS6gARc0QHHyuY"
+uri = "file://artifacts/pawan-security/public/service-commercial.png"
+type = "image"
+title = "Commercial CCTV setup"
+
+[[generated]]
+id = "5BtnL_yVkMH6K9StFtYlH"
+uri = "file://artifacts/pawan-security/public/service-residential.png"
+type = "image"
+title = "Residential CCTV home"
+
+[[generated]]
+id = "ptfDrhpj0OEwbR7zT6sQ6"
+uri = "file://artifacts/pawan-security/public/service-door.png"
+type = "image"
+title = "Door access control system"
+
+[[generated]]
+id = "kssmWgRB_RROuAYTmgn_a"
+uri = "file://artifacts/pawan-security/public/gallery-1.png"
+type = "image"
+title = "Gallery installation 1"
+
+[[generated]]
+id = "agvIUA7pKeO11IfrnLP2D"
+uri = "file://artifacts/pawan-security/public/gallery-2.png"
+type = "image"
+title = "Gallery installation 2"

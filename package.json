@@ -1,0 +1,25 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "node -e \"const fs=require('fs'); ['package-lock.json','yarn.lock'].forEach((f)=>{try{fs.unlinkSync(f)}catch{}}); const ua=process.env.npm_config_user_agent||''; if(!ua.startsWith('pnpm/')){console.error('Use pnpm instead'); process.exit(1);}\"",
+    "check:node": "node -e \"const v=process.versions.node.split('.').map(Number); const ok=(v[0] > 20) || (v[0]===20 && v[1] >= 19) || (v[0] >= 22); if(!ok){console.error('Node.js 20.19+ or 22+ is required. Current: '+process.versions.node); process.exit(1);}\"",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "build:web": "pnpm --filter @workspace/pawan-security run build",
+    "build:api": "pnpm --filter @workspace/api-server run build",
+    "start:api": "pnpm --filter @workspace/api-server run start",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --if-present run typecheck",
+    "deploy:check": "pnpm run check:node && pnpm run build"
+  },
+  "private": true,
+  "packageManager": "pnpm@10.30.1",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.2",
+    "prettier": "^3.8.1"
+  }
+}
