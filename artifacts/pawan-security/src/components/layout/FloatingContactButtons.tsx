@@ -1,5 +1,4 @@
-import { FileText, Phone, MessageCircle } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Phone, MessageCircle } from "lucide-react";
 
 const phoneNumber = "7248895469";
 
@@ -8,18 +7,10 @@ export function FloatingContactButtons() {
     <div
       className="fixed z-50 flex flex-col items-end gap-2"
       style={{
-        right: "calc(0.35rem + env(safe-area-inset-right))",
-        bottom: "max(1rem, calc(0.55rem + env(safe-area-inset-bottom)))",
+        right: "max(0.85rem, calc(0.55rem + env(safe-area-inset-right)))",
+        bottom: "max(1.2rem, calc(0.75rem + env(safe-area-inset-bottom)))",
       }}
     >
-      <Link
-        to="/contact"
-        aria-label="Get free quote"
-        className="group flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white text-rose-500 shadow-[0_8px_20px_rgba(0,0,0,0.2)] ring-2 ring-rose-100/90 transition-all duration-200 hover:scale-105 hover:text-rose-600"
-      >
-        <FileText className="h-4.5 w-4.5 sm:h-5 sm:w-5" />
-      </Link>
-
       <a
         href={`tel:${phoneNumber}`}
         aria-label="Call Smart CCTV India"
