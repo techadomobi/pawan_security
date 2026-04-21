@@ -103,25 +103,25 @@ export default function Home() {
     <div className="bg-white">
 
       {/* ── Hero ── */}
-      <section className="relative h-screen min-h-140 md:min-h-170 flex items-center overflow-hidden bg-gray-900">
+      <section className="relative min-h-svh md:min-h-170 flex items-center overflow-hidden bg-gray-900">
         <motion.div className="absolute inset-0 z-0" style={{ y: heroY }}>
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/85 to-gray-900/30 z-10" />
-          <img src="/hero-bg.png" alt="CCTV Security" className="w-full h-full object-cover opacity-55" />
+          <div className="absolute inset-0 bg-linear-to-r from-gray-950 via-gray-900/90 to-gray-900/55 z-10" />
+          <img src="/hero-bg.png" alt="CCTV Security" className="w-full h-full object-cover opacity-45 md:opacity-55" />
         </motion.div>
-        <div className="container relative z-20 px-4 md:px-6 pt-28 md:pt-24">
+        <div className="container relative z-20 px-4 md:px-6 pt-32 sm:pt-28 md:pt-24 pb-10 sm:pb-12">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-3xl">
-            <motion.div variants={fadeIn} className="flex items-center gap-2 mb-6">
+            <motion.div variants={fadeIn} className="flex items-center gap-2 mb-4 sm:mb-6">
               <div className="h-1 w-8 bg-primary rounded-full" />
-              <span className="text-primary font-semibold tracking-wider uppercase text-sm">Smart CCTV India — Delhi NCR</span>
+              <span className="text-white/90 font-semibold tracking-wider uppercase text-[11px] sm:text-sm drop-shadow-[0_1px_2px_rgba(0,0,0,0.65)]">Smart CCTV India — Delhi NCR</span>
             </motion.div>
-            <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-5 md:mb-6 leading-tight">
+            <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-4 md:mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
               Trusted CCTV Experts for{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">Complete Security</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-cyan-300">Complete Security</span>
             </motion.h1>
-            <motion.p variants={fadeIn} className="text-base sm:text-xl text-gray-300 mb-8 md:mb-10 max-w-2xl leading-relaxed">
+            <motion.p variants={fadeIn} className="text-base sm:text-xl text-gray-100/90 mb-7 md:mb-10 max-w-2xl leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
               Delhi's most reliable CCTV installation, repair, and maintenance company. We protect homes, offices, shops, and commercial spaces with professional surveillance systems and 24/7 support.
             </motion.p>
-            <motion.div variants={fadeIn} className="flex flex-wrap gap-3 sm:gap-4 mb-8 md:mb-12">
+            <motion.div variants={fadeIn} className="grid grid-cols-1 sm:flex sm:flex-wrap gap-3 sm:gap-4 mb-8 md:mb-12 max-w-xl">
               <Button size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg font-semibold w-full sm:w-auto" asChild>
                 <Link to="/contact">Get Free Quote</Link>
               </Button>
@@ -132,7 +132,7 @@ export default function Home() {
                 <a href="tel:7248895469" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call Now</a>
               </Button>
             </motion.div>
-            <motion.div variants={fadeIn} className="flex flex-wrap items-center gap-3 sm:gap-6 text-white/80 text-xs sm:text-sm font-medium">
+            <motion.div variants={fadeIn} className="grid grid-cols-1 sm:flex sm:flex-wrap items-start gap-2 sm:gap-6 text-white/90 text-xs sm:text-sm font-medium max-w-2xl">
               {["CP Plus & Hikvision Authorized", "Same-Day Service Available", "Free Site Visit", "3000+ Installations Done"].map((tag, i) => (
                 <span key={i} className="flex items-center gap-2">
                   <CheckCircle2 className="text-primary w-4 h-4 shrink-0" /> {tag}
@@ -173,18 +173,18 @@ export default function Home() {
       </section>
 
       {/* ── Services Grid ── */}
-      <section className="py-28 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-28 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-0.5 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">What We Do</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Complete Security Services</h2>
-            <p className="text-gray-600 text-lg leading-relaxed">From a single home camera to a 50-camera commercial network — we design, install, maintain, and repair every type of CCTV and security system.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Complete Security Services</h2>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed">From a single home camera to a 50-camera commercial network — we design, install, maintain, and repair every type of CCTV and security system.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
             {allServices.map((service, i) => (
               <motion.div
                 key={i}
@@ -193,21 +193,21 @@ export default function Home() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ delay: (i % 3) * 0.1, duration: 0.55 }}
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 group"
+                className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 group"
               >
-                <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <service.icon className="w-8 h-8" />
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-5 md:mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <service.icon className="w-7 h-7 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{service.desc}</p>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5 md:mb-6">{service.desc}</p>
                 <Link to="/services" className="text-primary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all text-sm">
                   Learn more <ChevronRight className="w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
           </div>
-          <div className="mt-14 text-center">
-            <Button size="lg" className="h-14 px-10 text-base font-semibold" asChild>
+          <div className="mt-10 md:mt-14 text-center">
+            <Button size="lg" className="h-12 md:h-14 px-8 md:px-10 text-base font-semibold w-full sm:w-auto" asChild>
               <Link to="/services">View All Services <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
           </div>
@@ -215,19 +215,19 @@ export default function Home() {
       </section>
 
       {/* ── Why Choose Us ── */}
-      <section className="py-28 bg-white">
+      <section className="py-16 sm:py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-0.5 w-8 bg-primary rounded-full" />
                 <span className="text-primary font-semibold tracking-wider uppercase text-sm">Why Smart CCTV India</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Delhi's Most Trusted CCTV Partner</h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-5 md:mb-6 leading-tight">Delhi's Most Trusted CCTV Partner</h2>
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-7 md:mb-8">
                 We've been protecting Delhi homes and businesses since 2014. Our reputation is built on honest pricing, fast service, and camera systems that actually work — even years after installation.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                 {whyUs.map((item, i) => (
                   <motion.div
                     key={i}
@@ -247,18 +247,18 @@ export default function Home() {
                   </motion.div>
                 ))}
               </div>
-              <div className="mt-10">
-                <Button size="lg" className="h-14 px-8 text-base font-semibold" asChild>
+              <div className="mt-8 md:mt-10">
+                <Button size="lg" className="h-12 md:h-14 px-8 text-base font-semibold w-full sm:w-auto" asChild>
                   <Link to="/about">About Our Company <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative">
-              <img src="/about-bg.png" alt="Security installation" className="w-full rounded-3xl shadow-2xl object-cover aspect-[4/3]" />
+              <img src="/about-bg.png" alt="Security installation" className="w-full rounded-3xl shadow-2xl object-cover aspect-4/3" />
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 border border-gray-100"
+                className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 border border-gray-100 hidden md:block"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center"><CheckCircle2 className="w-6 h-6 text-white" /></div>
@@ -271,7 +271,7 @@ export default function Home() {
               <motion.div
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
-                className="absolute -top-6 -right-6 bg-primary rounded-2xl shadow-xl p-5 text-white"
+                className="absolute -top-6 -right-6 bg-primary rounded-2xl shadow-xl p-5 text-white hidden md:block"
               >
                 <div className="text-3xl font-black">10+</div>
                 <div className="text-primary-foreground/80 text-xs font-medium">Years in Delhi</div>
@@ -282,20 +282,20 @@ export default function Home() {
       </section>
 
       {/* ── How It Works ── */}
-      <section className="py-28 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-gray-900" />
-        <motion.div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 8, repeat: Infinity }} />
+      <section className="py-16 sm:py-20 md:py-28 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900/20 to-gray-900" />
+        <motion.div className="absolute top-0 right-0 w-150 h-150 bg-primary/5 rounded-full blur-3xl" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 8, repeat: Infinity }} />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-0.5 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Our Process</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">How It Works</h2>
-            <p className="text-gray-400 text-lg">From your first call to a fully operational security system — here's exactly what happens.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">How It Works</h2>
+            <p className="text-gray-400 text-base md:text-lg">From your first call to a fully operational security system — here's exactly what happens.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {howItWorks.map((step, i) => (
               <motion.div
                 key={i}
@@ -308,8 +308,8 @@ export default function Home() {
                 {i < howItWorks.length - 1 && (
                   <div className="hidden lg:block absolute top-10 left-full w-6 h-0.5 bg-primary/30 z-10" />
                 )}
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-colors">
-                  <div className="text-6xl font-black text-primary/20 leading-none mb-4">{step.step}</div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7 hover:bg-white/10 transition-colors">
+                  <div className="text-5xl md:text-6xl font-black text-primary/20 leading-none mb-4">{step.step}</div>
                   <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-5">
                     {i === 0 && <MapPin className="w-5 h-5 text-white" />}
                     {i === 1 && <MessageSquare className="w-5 h-5 text-white" />}
@@ -326,21 +326,21 @@ export default function Home() {
       </section>
 
       {/* ── Recent Projects ── */}
-      <section className="py-28 bg-white">
+      <section className="py-16 sm:py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6">
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-0.5 w-8 bg-primary rounded-full" />
                 <span className="text-primary font-semibold tracking-wider uppercase text-sm">Recent Work</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">Projects We're Proud Of</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">Projects We're Proud Of</h2>
             </div>
             <Button variant="outline" size="lg" asChild>
               <Link to="/gallery">View Full Gallery <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
             {recentProjects.map((project, i) => (
               <motion.div
                 key={i}
@@ -351,7 +351,7 @@ export default function Home() {
                 whileHover={{ y: -6 }}
                 className="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <div className={`relative h-52 bg-gradient-to-br ${project.gradient} flex items-end p-6`}>
+                <div className={`relative h-52 bg-linear-to-br ${project.gradient} flex items-end p-6`}>
                   <span className="absolute top-4 left-4 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">{project.type}</span>
                   <div className="absolute inset-0 flex items-center justify-center opacity-10">
                     <Video className="w-32 h-32 text-white" />
@@ -443,16 +443,16 @@ export default function Home() {
       </section>
 
       {/* ── Service Areas ── */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-0.5 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Coverage</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">We Cover All of Delhi NCR</h2>
-            <p className="text-gray-600 text-lg">Our technicians are deployed across Delhi so we can reach you fast — usually within 2–4 hours of your call.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">We Cover All of Delhi NCR</h2>
+            <p className="text-gray-600 text-base md:text-lg">Our technicians are deployed across Delhi so we can reach you fast — usually within 2–4 hours of your call.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {[
@@ -476,24 +476,24 @@ export default function Home() {
       </section>
 
       {/* ── CTA Banner ── */}
-      <section className="py-24 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-700 to-primary" />
-        <motion.div className="absolute -top-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 6, repeat: Infinity }} />
-        <motion.div className="absolute -bottom-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 7, repeat: Infinity, delay: 1 }} />
+      <section className="py-16 sm:py-20 md:py-24 bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-blue-700 to-primary" />
+        <motion.div className="absolute -top-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl hidden md:block" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 6, repeat: Infinity }} />
+        <motion.div className="absolute -bottom-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl hidden md:block" animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 7, repeat: Infinity, delay: 1 }} />
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
               <Phone className="w-4 h-4" /> Free site visit — no obligation
             </div>
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight">Ready to Secure Your Property?</h2>
-            <p className="text-primary-foreground/80 text-xl max-w-2xl mx-auto mb-10">
+            <h2 className="text-3xl md:text-6xl font-black text-white mb-4 leading-tight">Ready to Secure Your Property?</h2>
+            <p className="text-primary-foreground/80 text-base md:text-xl max-w-2xl mx-auto mb-8 md:mb-10">
               Call us or fill the contact form. We'll arrange a free site visit and give you a transparent quote within 24 hours.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="h-14 px-10 text-lg font-bold" asChild>
+            <div className="grid grid-cols-1 sm:flex sm:flex-wrap gap-4 justify-center max-w-xl mx-auto">
+              <Button size="lg" variant="secondary" className="h-12 md:h-14 px-8 md:px-10 text-base md:text-lg font-bold w-full sm:w-auto" asChild>
                 <Link to="/contact">Get Free Quote</Link>
               </Button>
-              <Button size="lg" className="h-14 px-10 text-lg font-bold bg-white/10 hover:bg-white/20 text-white border-none" asChild>
+              <Button size="lg" className="h-12 md:h-14 px-8 md:px-10 text-base md:text-lg font-bold bg-white/10 hover:bg-white/20 text-white border-none w-full sm:w-auto" asChild>
                 <a href="tel:7248895469" className="flex items-center gap-2"><Phone className="w-5 h-5" /> 72488 95469</a>
               </Button>
             </div>

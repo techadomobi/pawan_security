@@ -70,28 +70,28 @@ export default function About() {
     <div className="bg-white">
 
       {/* ── Hero ── */}
-      <section className="relative bg-gray-900 py-36 pt-48 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-gray-900 to-gray-900" />
-        <img src="/about-bg.png" alt="About us" className="absolute inset-0 w-full h-full object-cover opacity-15" />
-        <motion.div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-blue-600/10 blur-3xl" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 8, repeat: Infinity }} />
+      <section className="relative bg-gray-900 py-20 sm:py-24 md:py-36 pt-32 sm:pt-36 md:pt-48 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900/40 via-gray-900 to-gray-900" />
+        <img src="/about-bg.png" alt="About us" className="absolute inset-0 w-full h-full object-cover opacity-10 sm:opacity-15" />
+        <motion.div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-blue-600/10 blur-3xl hidden md:block" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 8, repeat: Infinity }} />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-3xl">
             <motion.div variants={fadeIn} className="flex items-center gap-2 mb-4">
               <div className="h-1 w-8 bg-primary rounded-full" />
-              <span className="text-primary font-semibold tracking-wider uppercase text-sm">About Us</span>
+              <span className="text-white/90 font-semibold tracking-wider uppercase text-xs sm:text-sm">About Us</span>
             </motion.div>
-            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+            <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-5 md:mb-6 leading-tight">
               Protecting You Is Our{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">Top Priority</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-cyan-300">Top Priority</span>
             </motion.h1>
-            <motion.p variants={fadeIn} className="text-xl text-gray-300 leading-relaxed max-w-2xl">
+            <motion.p variants={fadeIn} className="text-base sm:text-xl text-gray-200 leading-relaxed max-w-2xl">
               At Smart CCTV India, we have been Delhi's most trusted CCTV and surveillance experts for over a decade. We don't just install cameras — we give you peace of mind, 24 hours a day.
             </motion.p>
-            <motion.div variants={fadeIn} className="flex flex-wrap gap-4 mt-8">
-              <Button size="lg" asChild className="h-12 px-8">
+            <motion.div variants={fadeIn} className="grid grid-cols-1 sm:flex sm:flex-wrap gap-3 sm:gap-4 mt-7 sm:mt-8 max-w-xl">
+              <Button size="lg" asChild className="h-12 px-8 w-full sm:w-auto">
                 <Link to="/contact">Get Free Quote <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-12 px-8 border-white/25 bg-white/10 text-white hover:bg-white/20" asChild>
+              <Button size="lg" variant="outline" className="h-12 px-8 border-white/25 bg-white/10 text-white hover:bg-white/20 w-full sm:w-auto" asChild>
                 <a href="tel:7248895469" className="flex items-center gap-2"><Phone className="w-4 h-4" /> 72488 95469</a>
               </Button>
             </motion.div>
@@ -120,22 +120,22 @@ export default function About() {
       </section>
 
       {/* ── Our Story ── */}
-      <section className="py-28">
+      <section className="py-16 sm:py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-1 w-8 bg-primary rounded-full" />
                 <span className="text-primary font-semibold tracking-wider uppercase text-sm">Our Story</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">A Decade of Keeping Delhi Safe</h2>
-              <p className="text-gray-600 mb-5 leading-relaxed text-lg">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-5 md:mb-6 leading-tight">A Decade of Keeping Delhi Safe</h2>
+              <p className="text-gray-600 mb-5 leading-relaxed text-base md:text-lg">
                 Founded in 2014 with a mission to make professional-grade security accessible to everyone, Smart CCTV India started as a small team of passionate technicians in Chhatarpur, South Delhi.
               </p>
               <p className="text-gray-600 mb-5 leading-relaxed">
                 Over the years, we've grown into Delhi's most trusted CCTV installation company — with a team of 50+ trained professionals, a fully equipped service center, and over 3000 successful installations across homes, shops, offices, warehouses, schools, and hospitals.
               </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-gray-600 mb-7 md:mb-8 leading-relaxed">
                 What sets us apart isn't just our technical expertise — it's the care we put into every job. We treat every property like our own, work cleanly, communicate clearly, and stand by our work with a solid warranty and 24/7 support.
               </p>
               <ul className="flex flex-col gap-3">
@@ -156,7 +156,7 @@ export default function About() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative">
               <img src="/about-bg.png" alt="Our team at work" className="w-full rounded-3xl shadow-2xl object-cover aspect-square" />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent rounded-3xl" />
+              <div className="absolute inset-0 bg-linear-to-t from-gray-900/50 to-transparent rounded-3xl" />
               <div className="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shrink-0"><ShieldCheck className="w-6 h-6 text-white" /></div>
@@ -172,16 +172,16 @@ export default function About() {
       </section>
 
       {/* ── Timeline ── */}
-      <section className="py-28 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-28 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-0.5 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Our Journey</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">10 Years of Growth</h2>
-            <p className="text-gray-600 text-lg">From a two-man team to Delhi's most trusted security company — here's how we got here.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">10 Years of Growth</h2>
+            <p className="text-gray-600 text-base md:text-lg">From a two-man team to Delhi's most trusted security company — here's how we got here.</p>
           </div>
           <div className="relative">
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2" />
@@ -193,12 +193,12 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className={`flex ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}
+                  className={`flex ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-6 md:gap-8 items-center`}
                 >
                   <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
                     <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 inline-block text-left w-full">
                       <div className="text-primary font-black text-2xl mb-2">{m.year}</div>
-                      <h3 className="font-bold text-gray-900 text-xl mb-2">{m.title}</h3>
+                      <h3 className="font-bold text-gray-900 text-lg md:text-xl mb-2">{m.title}</h3>
                       <p className="text-gray-600 leading-relaxed">{m.desc}</p>
                     </div>
                   </div>
@@ -214,18 +214,18 @@ export default function About() {
       </section>
 
       {/* ── Values ── */}
-      <section className="py-28 bg-white">
+      <section className="py-16 sm:py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-0.5 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Our Values</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Clients Choose Us</h2>
-            <p className="text-gray-600 text-lg">These aren't just words. They are the principles that guide every installation, every repair, every interaction with our clients.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Clients Choose Us</h2>
+            <p className="text-gray-600 text-base md:text-lg">These aren't just words. They are the principles that guide every installation, every repair, every interaction with our clients.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
             {values.map((value, i) => (
               <motion.div
                 key={i}
@@ -234,13 +234,13 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: (i % 3) * 0.1, duration: 0.6 }}
                 whileHover={{ y: -8 }}
-                className="bg-gray-50 border border-gray-100 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 group"
+                className="bg-gray-50 border border-gray-100 p-6 md:p-8 rounded-2xl hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <value.icon className="w-8 h-8" />
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-5 md:mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <value.icon className="w-7 h-7 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.desc}</p>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed">{value.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -249,7 +249,7 @@ export default function About() {
 
       {/* ── Work Process ── */}
       <section className="py-28 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/25 to-gray-900" />
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900/25 to-gray-900" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
@@ -410,7 +410,7 @@ export default function About() {
 
       {/* ── CTA ── */}
       <section className="py-24 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-700 to-primary" />
+        <div className="absolute inset-0 bg-linear-to-br from-blue-700 to-primary" />
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Ready to Secure Your Space?</h2>

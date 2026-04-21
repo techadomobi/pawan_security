@@ -200,11 +200,11 @@ export default function Services() {
     <div className="bg-white">
 
       {/* ── Hero ── */}
-      <section className="relative bg-gray-900 py-36 pt-48 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-gray-900 to-gray-900" />
-        <img src="/service-install.png" alt="Services" className="absolute inset-0 w-full h-full object-cover opacity-10" />
+      <section className="relative bg-gray-900 py-20 sm:py-24 md:py-36 pt-32 sm:pt-36 md:pt-48 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900/40 via-gray-900 to-gray-900" />
+        <img src="/service-install.png" alt="Services" className="absolute inset-0 w-full h-full object-cover opacity-10 sm:opacity-15" />
         <motion.div
-          className="absolute -top-10 -left-10 w-80 h-80 rounded-full bg-primary/10 blur-3xl"
+          className="absolute -top-10 -left-10 w-80 h-80 rounded-full bg-primary/10 blur-3xl hidden md:block"
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 6, repeat: Infinity }}
         />
@@ -212,20 +212,20 @@ export default function Services() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
             <div className="flex items-center gap-2 mb-4">
               <div className="h-1 w-8 bg-primary rounded-full" />
-              <span className="text-primary font-semibold tracking-wider uppercase text-sm">Our Services</span>
+              <span className="text-white/90 font-semibold tracking-wider uppercase text-xs sm:text-sm">Our Services</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-5 md:mb-6 leading-tight">
               Keeping You One Step{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">Ahead of Threats</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-cyan-300">Ahead of Threats</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-xl text-gray-300 max-w-2xl leading-relaxed">
               Comprehensive security solutions for homes and businesses across Delhi NCR. Every service backed by expertise, genuine equipment, and fast responsive support.
             </p>
-            <div className="flex flex-wrap gap-4 mt-8">
-              <Button size="lg" asChild className="h-12 px-8">
+            <div className="grid grid-cols-1 sm:flex sm:flex-wrap gap-3 sm:gap-4 mt-7 sm:mt-8 max-w-xl">
+              <Button size="lg" asChild className="h-12 px-8 w-full sm:w-auto">
                 <Link to="/contact">Get Free Quote <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-12 px-8 border-white/25 bg-white/10 text-white hover:bg-white/20" asChild>
+              <Button size="lg" variant="outline" className="h-12 px-8 border-white/25 bg-white/10 text-white hover:bg-white/20 w-full sm:w-auto" asChild>
                 <a href="tel:7248895469" className="flex items-center gap-2"><Phone className="w-4 h-4" /> Call Now</a>
               </Button>
             </div>
@@ -235,7 +235,7 @@ export default function Services() {
 
       {/* ── Quick Stats ── */}
       <section className="bg-primary py-10">
-        <div className="container mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
+        <div className="container mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6 text-white text-center">
           {[
             { icon: Users, value: "3000+", label: "Installations Done" },
             { icon: Clock, value: "Same Day", label: "Repair Response" },
@@ -252,18 +252,18 @@ export default function Services() {
       </section>
 
       {/* ── Services Detail ── */}
-      <section className="py-28 bg-white">
+      <section className="py-16 sm:py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-0.5 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">All Services</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Everything You Need to Stay Secure</h2>
-            <p className="text-gray-600 text-lg">Six specialized services — from installation to AMC — covering every security need for homes and businesses.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Everything You Need to Stay Secure</h2>
+            <p className="text-gray-600 text-base md:text-lg">Six specialized services — from installation to AMC — covering every security need for homes and businesses.</p>
           </div>
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-12 md:gap-16">
             {services.map((service, i) => (
               <motion.div
                 key={service.id}
@@ -271,7 +271,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.7 }}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
               >
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -280,14 +280,14 @@ export default function Services() {
                     ))}
                   </div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center">
+                    <div className="w-11 h-11 md:w-12 md:h-12 bg-primary text-white rounded-xl flex items-center justify-center">
                       <service.icon className="w-6 h-6" />
                     </div>
-                    <h2 className="text-3xl font-bold text-gray-900">{service.title}</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{service.title}</h2>
                   </div>
-                  <p className="text-primary font-semibold mb-4">{service.shortDesc}</p>
-                  <p className="text-gray-600 leading-relaxed mb-7">{service.longDesc}</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-7">
+                  <p className="text-primary font-semibold mb-4 text-sm sm:text-base">{service.shortDesc}</p>
+                  <p className="text-gray-600 leading-relaxed mb-6 md:mb-7 text-sm sm:text-base">{service.longDesc}</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6 md:mb-7">
                     {service.features.map((feature, j) => (
                       <div key={j} className="flex items-center gap-2 text-sm text-gray-700">
                         <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
@@ -295,7 +295,7 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-center gap-6 mb-8 flex-wrap">
+                  <div className="flex items-center gap-3 md:gap-6 mb-7 md:mb-8 flex-wrap">
                     <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
                       <Clock className="w-4 h-4" /> Response: {service.turnaround}
                     </div>
@@ -303,7 +303,7 @@ export default function Services() {
                       <Shield className="w-4 h-4" /> Warranty: {service.warranty}
                     </div>
                   </div>
-                  <Button size="lg" className="h-12 px-8" asChild>
+                  <Button size="lg" className="h-12 px-8 w-full sm:w-auto" asChild>
                     <Link to="/contact">Book This Service <ArrowRight className="ml-2 w-4 h-4" /></Link>
                   </Button>
                 </div>
@@ -311,9 +311,9 @@ export default function Services() {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full rounded-3xl shadow-xl object-cover aspect-[4/3]"
+                    className="w-full rounded-3xl shadow-xl object-cover aspect-4/3"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent rounded-3xl" />
+                  <div className="absolute inset-0 bg-linear-to-t from-gray-900/30 to-transparent rounded-3xl" />
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-3 inline-flex items-center gap-3">
                       <service.icon className="w-5 h-5 text-white" />
@@ -328,18 +328,18 @@ export default function Services() {
       </section>
 
       {/* ── Camera Types ── */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-0.5 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Camera Types</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Which Camera Is Right for You?</h2>
-            <p className="text-gray-600 text-lg">We install every type of surveillance camera — our experts help you choose the best option for your property.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Which Camera Is Right for You?</h2>
+            <p className="text-gray-600 text-base md:text-lg">We install every type of surveillance camera — our experts help you choose the best option for your property.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {cameraTypes.map((cam, i) => (
               <motion.div
                 key={i}
@@ -348,12 +348,12 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -6 }}
-                className="bg-white border border-gray-100 rounded-2xl p-7 text-center hover:shadow-xl transition-all"
+                className="bg-white border border-gray-100 rounded-2xl p-6 md:p-7 text-center hover:shadow-xl transition-all"
               >
-                <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-5">
-                  <cam.icon className="w-8 h-8" />
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-5">
+                  <cam.icon className="w-7 h-7 md:w-8 md:h-8" />
                 </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">{cam.name}</h3>
+                <h3 className="font-bold text-gray-900 text-base md:text-lg mb-2">{cam.name}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{cam.desc}</p>
               </motion.div>
             ))}
@@ -362,18 +362,18 @@ export default function Services() {
       </section>
 
       {/* ── Pricing Plans ── */}
-      <section className="py-28 bg-white">
+      <section className="py-16 sm:py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-0.5 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Pricing</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Transparent, Affordable Packages</h2>
-            <p className="text-gray-600 text-lg">Starting prices for our most popular configurations. All packages include professional installation, DVR, cabling, and mobile setup.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent, Affordable Packages</h2>
+            <p className="text-gray-600 text-base md:text-lg">Starting prices for our most popular configurations. All packages include professional installation, DVR, cabling, and mobile setup.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
             {pricingPlans.map((plan, i) => (
               <motion.div
                 key={i}
@@ -382,7 +382,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
                 whileHover={{ y: -8 }}
-                className={`rounded-3xl p-8 border-2 transition-all duration-300 ${plan.highlight ? "border-primary bg-primary text-white shadow-2xl shadow-primary/20" : "border-gray-100 bg-white shadow-sm hover:shadow-xl"}`}
+                className={`rounded-3xl p-6 md:p-8 border-2 transition-all duration-300 ${plan.highlight ? "border-primary bg-primary text-white shadow-2xl shadow-primary/20" : "border-gray-100 bg-white shadow-sm hover:shadow-xl"}`}
               >
                 {plan.highlight && (
                   <div className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
@@ -390,8 +390,8 @@ export default function Services() {
                   </div>
                 )}
                 <div className={`text-sm font-semibold mb-1 ${plan.highlight ? "text-primary-foreground/70" : "text-gray-500"}`}>{plan.cameras}</div>
-                <h3 className={`text-2xl font-bold mb-1 ${plan.highlight ? "text-white" : "text-gray-900"}`}>{plan.name}</h3>
-                <div className={`text-4xl font-black mb-2 ${plan.highlight ? "text-white" : "text-primary"}`}>{plan.price}</div>
+                <h3 className={`text-xl md:text-2xl font-bold mb-1 ${plan.highlight ? "text-white" : "text-gray-900"}`}>{plan.name}</h3>
+                <div className={`text-3xl md:text-4xl font-black mb-2 ${plan.highlight ? "text-white" : "text-primary"}`}>{plan.price}</div>
                 <div className={`text-sm mb-7 ${plan.highlight ? "text-primary-foreground/70" : "text-gray-500"}`}>{plan.description}</div>
                 <ul className="flex flex-col gap-2.5 mb-8">
                   {plan.features.map((feat, j) => (
@@ -417,13 +417,13 @@ export default function Services() {
       </section>
 
       {/* ── Brands ── */}
-      <section className="py-20 bg-gray-50 border-y border-gray-100">
+      <section className="py-16 sm:py-20 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Camera Brands We Install & Service</h3>
-            <p className="text-gray-500">Industry-leading brands for maximum reliability and longevity</p>
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Camera Brands We Install & Service</h3>
+            <p className="text-gray-500 text-sm md:text-base">Industry-leading brands for maximum reliability and longevity</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {brandLogos.map((brand, i) => (
               <motion.div
                 key={i}
@@ -442,17 +442,17 @@ export default function Services() {
       </section>
 
       {/* ── Coverage ── */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-5xl mx-auto bg-gray-50 border border-gray-100 rounded-3xl p-10 md:p-14">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="max-w-5xl mx-auto bg-gray-50 border border-gray-100 rounded-3xl p-7 sm:p-10 md:p-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
               <div>
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-0.5 w-6 bg-primary rounded-full" />
                   <span className="text-primary font-semibold text-sm uppercase tracking-wider">Service Area</span>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">We Come to You — All Across Delhi NCR</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">Our technicians are stationed across Delhi so we can reach any location quickly — most service calls within 2–4 hours.</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">We Come to You — All Across Delhi NCR</h3>
+                <p className="text-gray-600 leading-relaxed mb-6 text-sm sm:text-base">Our technicians are stationed across Delhi so we can reach any location quickly — most service calls within 2–4 hours.</p>
                 <div className="flex flex-wrap gap-2">
                   {["South Delhi", "Central Delhi", "West Delhi", "East Delhi", "Gurgaon", "Noida", "Faridabad", "Ghaziabad"].map((area, i) => (
                     <span key={i} className="flex items-center gap-1 bg-white border border-gray-200 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full">
@@ -489,7 +489,7 @@ export default function Services() {
 
       {/* ── CTA ── */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-gray-900" />
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900/30 to-gray-900" />
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Need a Custom Security Solution?</h2>

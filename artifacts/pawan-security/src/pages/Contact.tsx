@@ -56,10 +56,10 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="relative bg-gray-900 py-32 pt-44 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-gray-900 to-gray-900" />
+      <section className="relative bg-gray-900 py-20 sm:py-24 md:py-32 pt-32 sm:pt-36 md:pt-44 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900/40 via-gray-900 to-gray-900" />
         <motion.div
-          className="absolute -bottom-20 -right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl"
+          className="absolute -bottom-20 -right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl hidden md:block"
           animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 7, repeat: Infinity }}
         />
@@ -74,10 +74,10 @@ export default function Contact() {
               <div className="h-1 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Contact Us</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Let's Secure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">Your Space</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 md:mb-6">
+              Let's Secure <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-cyan-300">Your Space</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl">
+            <p className="text-base sm:text-xl text-gray-300 max-w-2xl">
               Get in touch for a free site assessment and quote. Our team responds within the hour during business hours.
             </p>
           </motion.div>
@@ -85,8 +85,8 @@ export default function Contact() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-16 bg-gray-50 border-b border-gray-100">
-        <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="py-14 sm:py-16 bg-gray-50 border-b border-gray-100">
+        <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {contactInfo.map((info, i) => (
             <motion.div
               key={i}
@@ -95,7 +95,7 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               whileHover={{ y: -5 }}
-              className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all"
+              className="bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all"
             >
               <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
                 <info.icon className="w-6 h-6" />
@@ -118,8 +118,8 @@ export default function Contact() {
       </section>
 
       {/* Form + Map */}
-      <section className="py-24">
-        <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="py-16 sm:py-20 md:py-24">
+        <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12">
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -131,8 +131,8 @@ export default function Contact() {
               <div className="h-1 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Free Quote Request</span>
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Tell Us About Your Needs</h2>
-            <p className="text-gray-600 mb-8">Fill out the form and we'll get back to you within 24 hours with a customized quote.</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Tell Us About Your Needs</h2>
+            <p className="text-gray-600 mb-7 md:mb-8 text-sm sm:text-base">Fill out the form and we'll get back to you within 24 hours with a customized quote.</p>
 
             {submitted ? (
               <motion.div
@@ -246,8 +246,8 @@ export default function Contact() {
                 <div className="h-1 w-8 bg-primary rounded-full" />
                 <span className="text-primary font-semibold tracking-wider uppercase text-sm">Find Us</span>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Visit Our Office</h2>
-              <p className="text-gray-600 mb-6">Drop by our office in Chhatarpur, New Delhi for an in-person consultation.</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Visit Our Office</h2>
+              <p className="text-gray-600 mb-6 text-sm sm:text-base">Drop by our office in Chhatarpur, New Delhi for an in-person consultation.</p>
               
               <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 mb-8">
                 <iframe
@@ -264,13 +264,13 @@ export default function Contact() {
             </div>
 
             {/* Quick contact callout */}
-            <div className="bg-gray-900 rounded-2xl p-8 text-white">
+            <div className="bg-gray-900 rounded-2xl p-6 md:p-8 text-white">
               <h3 className="text-xl font-bold mb-4">Need Urgent Help?</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">For urgent CCTV repairs or security emergencies, call us directly. We offer same-day service across Delhi NCR.</p>
               <a
                 href="tel:7248895469"
                 data-testid="link-call-urgent"
-                className="flex items-center gap-3 bg-primary hover:bg-primary/90 transition-colors text-white font-bold py-4 px-6 rounded-xl"
+                className="flex items-center gap-3 bg-primary hover:bg-primary/90 transition-colors text-white font-bold py-4 px-5 md:px-6 rounded-xl"
               >
                 <Phone className="w-6 h-6" />
                 <div>
