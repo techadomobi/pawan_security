@@ -73,7 +73,11 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className={`md:hidden z-50 p-2 ${isScrolled || isMobileMenuOpen ? 'text-gray-900' : 'text-white'}`}
+          className={`md:hidden z-50 p-2 rounded-lg border transition-colors ${
+            isScrolled || isMobileMenuOpen
+              ? 'text-gray-900 bg-white border-gray-200'
+              : 'text-white bg-black/35 border-white/25'
+          }`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <Menu />}
@@ -88,14 +92,16 @@ export function Navbar() {
               exit={{ opacity: 0, y: -20 }}
               className="fixed inset-0 bg-white z-40 flex flex-col pt-24 px-6 pb-6"
             >
-              <div className="flex flex-col gap-6 text-center text-lg">
+              <div className="flex flex-col gap-4 text-center text-lg">
                 {links.map((link) => (
                   <Link
                     key={link.href}
                     to={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`font-semibold ${
-                      location.pathname === link.href ? "text-primary" : "text-gray-800"
+                    className={`font-semibold rounded-xl py-3 px-4 transition-colors ${
+                      location.pathname === link.href
+                        ? "text-primary bg-primary/10"
+                        : "text-gray-800 bg-gray-50 hover:bg-gray-100"
                     }`}
                   >
                     {link.label}

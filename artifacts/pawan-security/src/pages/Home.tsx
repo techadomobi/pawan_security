@@ -128,7 +128,7 @@ export default function Home() {
               <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg bg-white/10 text-white border-white/25 hover:bg-white/20 w-full sm:w-auto" asChild>
                 <Link to="/services">Our Services</Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg bg-white/5 text-white border-white/15 hover:bg-white/10 w-full sm:w-auto" asChild>
+              <Button size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg bg-orange-600 text-white hover:bg-orange-700 border border-orange-500 w-full sm:w-auto" asChild>
                 <a href="tel:7248895469" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call Now</a>
               </Button>
             </motion.div>
