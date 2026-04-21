@@ -365,7 +365,7 @@ export default function Gallery() {
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Typical Results</span>
               <div className="h-0.5 w-8 bg-primary rounded-full" />
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Pawan Security Difference</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Smart CCTV India Difference</h2>
             <p className="text-gray-600 text-lg">What you get when you choose us — versus a typical low-quality installer.</p>
           </div>
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -393,7 +393,7 @@ export default function Gallery() {
             <div className="bg-green-50 border border-green-100 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center"><CheckCircle2 className="w-5 h-5" /></div>
-                <h3 className="font-bold text-green-900 text-xl">Pawan Security Solution</h3>
+                <h3 className="font-bold text-green-900 text-xl">Smart CCTV India</h3>
               </div>
               <ul className="flex flex-col gap-3">
                 {[
@@ -421,7 +421,7 @@ export default function Gallery() {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Your Property Could Be Next</h2>
             <p className="text-primary-foreground/80 text-xl max-w-xl mx-auto mb-10">
-              Join thousands of Delhi NCR homes and businesses secured by Pawan Security Solution.
+              Join thousands of Delhi NCR homes and businesses secured by Smart CCTV India.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" variant="secondary" className="h-14 px-10 text-lg font-bold" asChild>

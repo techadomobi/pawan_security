@@ -39,7 +39,7 @@ export function Navbar() {
             <Shield className="w-6 h-6" />
           </div>
           <span className={`font-bold text-xl tracking-tight transition-colors ${isScrolled ? 'text-gray-900' : 'text-gray-900 md:text-white'}`}>
-            Pawan Security
+            Smart CCTV India
           </span>
         </Link>
 

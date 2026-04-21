@@ -4,3 +4,4 @@
   "buildCommand": "PORT=3000 BASE_PATH=/ pnpm --filter @workspace/pawan-security run build",
   "outputDirectory": "artifacts/pawan-security/dist/public"
 }
+ 

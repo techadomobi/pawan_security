@@ -11,7 +11,7 @@ export function Footer() {
               <Shield className="w-6 h-6" />
             </div>
             <span className="font-bold text-2xl tracking-tight text-white">
-              Pawan Security Solution
+              Smart CCTV India
             </span>
           </Link>
           <p className="text-gray-400 mb-6 max-w-md">
@@ -53,7 +53,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container mx-auto px-4 md:px-6 mt-16 pt-8 border-t border-gray-900 text-sm text-center text-gray-500">
-        &copy; {new Date().getFullYear()} Pawan Security Solution. All rights reserved.
+        &copy; {new Date().getFullYear()} Smart CCTV India. All rights reserved.
       </div>
     </footer>
   );

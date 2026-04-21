@@ -85,7 +85,7 @@ export default function About() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">Top Priority</span>
             </motion.h1>
             <motion.p variants={fadeIn} className="text-xl text-gray-300 leading-relaxed max-w-2xl">
-              At Pawan Security Solution, we have been Delhi's most trusted CCTV and surveillance experts for over a decade. We don't just install cameras — we give you peace of mind, 24 hours a day.
+              At Smart CCTV India, we have been Delhi's most trusted CCTV and surveillance experts for over a decade. We don't just install cameras — we give you peace of mind, 24 hours a day.
             </motion.p>
             <motion.div variants={fadeIn} className="flex flex-wrap gap-4 mt-8">
               <Button size="lg" asChild className="h-12 px-8">
@@ -130,7 +130,7 @@ export default function About() {
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">A Decade of Keeping Delhi Safe</h2>
               <p className="text-gray-600 mb-5 leading-relaxed text-lg">
-                Founded in 2014 with a mission to make professional-grade security accessible to everyone, Pawan Security Solution started as a small team of passionate technicians in Chhatarpur, South Delhi.
+                Founded in 2014 with a mission to make professional-grade security accessible to everyone, Smart CCTV India started as a small team of passionate technicians in Chhatarpur, South Delhi.
               </p>
               <p className="text-gray-600 mb-5 leading-relaxed">
                 Over the years, we've grown into Delhi's most trusted CCTV installation company — with a team of 50+ trained professionals, a fully equipped service center, and over 3000 successful installations across homes, shops, offices, warehouses, schools, and hospitals.
@@ -414,7 +414,7 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Ready to Secure Your Space?</h2>
-            <p className="text-primary-foreground/80 text-xl mb-10">Join 3000+ satisfied clients who trust Pawan Security Solution for their complete security needs.</p>
+            <p className="text-primary-foreground/80 text-xl mb-10">Join 3000+ satisfied clients who trust Smart CCTV India for their complete security needs.</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" variant="secondary" className="h-14 px-10 text-lg font-bold" asChild>
                 <Link to="/contact">Get a Free Quote Today</Link>

@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import NotFound from "@/pages/not-found";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingContactButtons } from "@/components/layout/FloatingContactButtons";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
@@ -44,6 +45,7 @@ function AnimatedRoutes() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+        <FloatingContactButtons />
         <Footer />
       </motion.div>
     </AnimatePresence>

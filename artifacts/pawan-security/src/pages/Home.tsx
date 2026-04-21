@@ -73,10 +73,10 @@ const howItWorks = [
 ];
 
 const testimonials = [
-  { name: "Rajesh Gupta", role: "Homeowner, Chhatarpur", rating: 5, quote: "Pawan Security Solution installed 6 cameras in our house in a single day. The picture quality is stunning — even at night. The team was clean, fast, and very professional." },
-  { name: "Sunita Mehta", role: "Shop Owner, Lajpat Nagar", rating: 5, quote: "My shop had a theft incident. After Pawan's team installed their system, I can monitor everything live from my phone. It's given me so much peace of mind. Excellent service!" },
+  { name: "Rajesh Gupta", role: "Homeowner, Chhatarpur", rating: 5, quote: "Smart CCTV India installed 6 cameras in our house in a single day. The picture quality is stunning — even at night. The team was clean, fast, and very professional." },
+  { name: "Sunita Mehta", role: "Shop Owner, Lajpat Nagar", rating: 5, quote: "After Smart CCTV India installed their system, I can monitor everything live from my phone. It's given me so much peace of mind. Excellent service!" },
   { name: "Vikram Singh", role: "Apartment Manager, Dwarka", rating: 5, quote: "We deployed 24 cameras across our society — gates, corridors, and parking. The AMC plan they offer is excellent. Any issue and they're there the same day." },
-  { name: "Anita Kapoor", role: "School Principal, Greater Kailash", rating: 5, quote: "Child safety is our top priority. Pawan Security covered every classroom, corridor, and entry point. The remote monitoring has been a game changer for our administration." },
+  { name: "Anita Kapoor", role: "School Principal, Greater Kailash", rating: 5, quote: "Child safety is our top priority. Smart CCTV India covered every classroom, corridor, and entry point. The remote monitoring has been a game changer for our administration." },
   { name: "Deepak Malhotra", role: "Warehouse Owner, Okhla", rating: 5, quote: "16-camera network with night vision and 30-day recording. The installation was flawless and the mobile app works perfectly. Best investment I've made for my business." },
   { name: "Priya Bhatia", role: "Villa Owner, Vasant Kunj", rating: 5, quote: "They replaced my outdated analog system with a full HD IP setup. The difference is night and day. Very reasonable pricing and truly professional team." },
 ];
@@ -112,7 +112,7 @@ export default function Home() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-3xl">
             <motion.div variants={fadeIn} className="flex items-center gap-2 mb-6">
               <div className="h-1 w-8 bg-primary rounded-full" />
-              <span className="text-primary font-semibold tracking-wider uppercase text-sm">Pawan Security Solution — Delhi NCR</span>
+              <span className="text-primary font-semibold tracking-wider uppercase text-sm">Smart CCTV India — Delhi NCR</span>
             </motion.div>
             <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
               Trusted CCTV Experts for{" "}
@@ -221,7 +221,7 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-0.5 w-8 bg-primary rounded-full" />
-                <span className="text-primary font-semibold tracking-wider uppercase text-sm">Why Pawan Security</span>
+                <span className="text-primary font-semibold tracking-wider uppercase text-sm">Why Smart CCTV India</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Delhi's Most Trusted CCTV Partner</h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
