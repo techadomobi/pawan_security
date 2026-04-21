@@ -45,7 +45,6 @@ function AnimatedRoutes() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        <FloatingContactButtons />
         <Footer />
       </motion.div>
     </AnimatePresence>
@@ -60,6 +59,7 @@ function App() {
       <TooltipProvider>
         <BrowserRouter basename={base}>
           <AnimatedRoutes />
+          <FloatingContactButtons />
         </BrowserRouter>
         <Toaster />
       </TooltipProvider>
