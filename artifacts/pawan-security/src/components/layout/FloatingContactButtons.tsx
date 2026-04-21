@@ -4,7 +4,13 @@ const phoneNumber = "7248895469";
 
 export function FloatingContactButtons() {
   return (
-    <div className="fixed bottom-4 right-3 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-2.5 md:gap-3">
+    <div
+      className="fixed z-50 flex flex-col items-end gap-2.5 md:gap-3"
+      style={{
+        right: "calc(0.75rem + env(safe-area-inset-right))",
+        bottom: "calc(1.5rem + env(safe-area-inset-bottom))",
+      }}
+    >
       <a
         href={`tel:${phoneNumber}`}
         aria-label="Call Smart CCTV India"

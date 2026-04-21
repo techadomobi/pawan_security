@@ -73,7 +73,7 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className={`md:hidden z-50 p-2 rounded-lg border transition-colors ${
+          className={`md:hidden z-50 flex h-11 w-11 items-center justify-center rounded-xl border-2 transition-colors shadow-lg ${
             isScrolled || isMobileMenuOpen
               ? 'text-gray-900 bg-white border-gray-200'
               : 'text-white bg-black/35 border-white/25'
