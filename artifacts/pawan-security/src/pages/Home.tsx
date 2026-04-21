@@ -103,36 +103,36 @@ export default function Home() {
     <div className="bg-white">
 
       {/* ── Hero ── */}
-      <section className="relative h-screen min-h-[680px] flex items-center overflow-hidden bg-gray-900">
+      <section className="relative h-screen min-h-140 md:min-h-170 flex items-center overflow-hidden bg-gray-900">
         <motion.div className="absolute inset-0 z-0" style={{ y: heroY }}>
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/85 to-gray-900/30 z-10" />
           <img src="/hero-bg.png" alt="CCTV Security" className="w-full h-full object-cover opacity-55" />
         </motion.div>
-        <div className="container relative z-20 px-4 md:px-6 pt-24">
+        <div className="container relative z-20 px-4 md:px-6 pt-28 md:pt-24">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-3xl">
             <motion.div variants={fadeIn} className="flex items-center gap-2 mb-6">
               <div className="h-1 w-8 bg-primary rounded-full" />
               <span className="text-primary font-semibold tracking-wider uppercase text-sm">Smart CCTV India — Delhi NCR</span>
             </motion.div>
-            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+            <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-5 md:mb-6 leading-tight">
               Trusted CCTV Experts for{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">Complete Security</span>
             </motion.h1>
-            <motion.p variants={fadeIn} className="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+            <motion.p variants={fadeIn} className="text-base sm:text-xl text-gray-300 mb-8 md:mb-10 max-w-2xl leading-relaxed">
               Delhi's most reliable CCTV installation, repair, and maintenance company. We protect homes, offices, shops, and commercial spaces with professional surveillance systems and 24/7 support.
             </motion.p>
-            <motion.div variants={fadeIn} className="flex flex-wrap gap-4 mb-12">
-              <Button size="lg" className="h-14 px-8 text-lg font-semibold" asChild>
+            <motion.div variants={fadeIn} className="flex flex-wrap gap-3 sm:gap-4 mb-8 md:mb-12">
+              <Button size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg font-semibold w-full sm:w-auto" asChild>
                 <Link to="/contact">Get Free Quote</Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-white/10 text-white border-white/25 hover:bg-white/20" asChild>
+              <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg bg-white/10 text-white border-white/25 hover:bg-white/20 w-full sm:w-auto" asChild>
                 <Link to="/services">Our Services</Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-white/5 text-white border-white/15 hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg bg-white/5 text-white border-white/15 hover:bg-white/10 w-full sm:w-auto" asChild>
                 <a href="tel:7248895469" className="flex items-center gap-2"><Phone className="w-5 h-5" /> Call Now</a>
               </Button>
             </motion.div>
-            <motion.div variants={fadeIn} className="flex flex-wrap items-center gap-6 text-white/75 text-sm font-medium">
+            <motion.div variants={fadeIn} className="flex flex-wrap items-center gap-3 sm:gap-6 text-white/80 text-xs sm:text-sm font-medium">
               {["CP Plus & Hikvision Authorized", "Same-Day Service Available", "Free Site Visit", "3000+ Installations Done"].map((tag, i) => (
                 <span key={i} className="flex items-center gap-2">
                   <CheckCircle2 className="text-primary w-4 h-4 shrink-0" /> {tag}

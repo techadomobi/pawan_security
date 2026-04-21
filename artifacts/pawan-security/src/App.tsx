@@ -35,7 +35,7 @@ function AnimatedRoutes() {
         className="flex flex-col min-h-screen"
       >
         <Navbar />
-        <main className="flex-grow">
+        <main className="grow">
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

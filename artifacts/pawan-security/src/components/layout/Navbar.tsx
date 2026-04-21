@@ -38,7 +38,7 @@ export function Navbar() {
           <div className="bg-primary text-primary-foreground p-2 rounded-lg group-hover:scale-105 transition-transform">
             <Shield className="w-6 h-6" />
           </div>
-          <span className={`font-bold text-xl tracking-tight transition-colors ${isScrolled ? 'text-gray-900' : 'text-gray-900 md:text-white'}`}>
+          <span className={`font-bold text-base sm:text-xl tracking-tight transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
             Smart CCTV India
           </span>
         </Link>

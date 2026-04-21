@@ -80,12 +80,12 @@
   --elevate-2: rgba(0,0,0, .08);
 
   /* Crisp light theme — professional security company */
-  --background: 210 20% 98%;
+  --background: 210 33% 98%;
   --foreground: 222 47% 11%;
 
   --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --ring: 221 83% 53%;
+  --ring: 210 93% 43%;
 
   --card: 0 0% 100%;
   --card-foreground: 222 47% 11%;
@@ -95,18 +95,18 @@
   --popover-foreground: 222 47% 11%;
   --popover-border: 214 32% 91%;
 
-  /* Primary: Bold Professional Blue */
-  --primary: 221 83% 53%;
+  /* Primary: Professional blue aligned with orange/green contact actions */
+  --primary: 210 93% 43%;
   --primary-foreground: 210 40% 98%;
 
-  /* Secondary: Soft Slate */
-  --secondary: 210 40% 96.1%;
+  /* Secondary: Soft cool slate */
+  --secondary: 210 28% 94%;
   --secondary-foreground: 222 47% 11%;
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215 16% 47%;
+  --muted: 210 24% 95%;
+  --muted-foreground: 215 18% 38%;
 
-  --accent: 210 40% 96.1%;
+  --accent: 205 44% 92%;
   --accent-foreground: 222 47% 11%;
 
   --destructive: 0 84% 60%;
@@ -116,14 +116,14 @@
   --sidebar: 210 20% 97%;
   --sidebar-foreground: 222 47% 11%;
   --sidebar-border: 214 32% 91%;
-  --sidebar-primary: 221 83% 53%;
+  --sidebar-primary: 210 93% 43%;
   --sidebar-primary-foreground: 210 40% 98%;
   --sidebar-accent: 210 40% 96%;
   --sidebar-accent-foreground: 222 47% 11%;
-  --sidebar-ring: 221 83% 53%;
+  --sidebar-ring: 210 93% 43%;
 
   /* Charts */
-  --chart-1: 221 83% 53%;
+  --chart-1: 210 93% 43%;
   --chart-2: 212 95% 68%;
   --chart-3: 216 87% 48%;
   --chart-4: 226 71% 40%;
