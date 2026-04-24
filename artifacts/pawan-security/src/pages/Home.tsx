@@ -456,21 +456,60 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {[
-              "Chhatarpur", "Saket", "Vasant Kunj", "Dwarka", "Lajpat Nagar", "Greater Kailash",
-              "Connaught Place", "Okhla", "Hauz Khas", "Mehrauli", "Rohini", "Janakpuri",
-              "Malviya Nagar", "Pitampura", "Gurgaon", "Noida", "Faridabad", "Ghaziabad"
-            ].map((area, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.04 }}
-                className="bg-white border border-gray-200 rounded-lg px-4 py-2.5 text-center text-gray-700 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
-              >
-                <MapPin className="w-3 h-3 inline mr-1 text-primary" />{area}
-              </motion.div>
-            ))}
+              { label: "Neb Sarai", to: "/locations/nebsarai" },
+              { label: "Chhatarpur", to: "/locations/chhatarpur" },
+              { label: "Saket", to: "/locations/saket" },
+              { label: "Green Park", to: "/locations/green-park" },
+              { label: "Vasant Kunj", to: "/locations/vasant-kunj" },
+              { label: "Dwarka" },
+              { label: "Lajpat Nagar" },
+              { label: "Greater Kailash" },
+              { label: "Connaught Place" },
+              { label: "Okhla" },
+              { label: "Hauz Khas", to: "/locations/hauz-khas" },
+              { label: "Ghitorni", to: "/locations/ghitorni" },
+              { label: "Mehrauli" },
+              { label: "Rohini" },
+              { label: "Janakpuri" },
+              { label: "Malviya Nagar", to: "/locations/malviya-nagar" },
+              { label: "Rajpur", to: "/locations/rajpur" },
+              { label: "Sultanpur", to: "/locations/sultanpur" },
+              { label: "Khanpur", to: "/locations/khanpur" },
+              { label: "Pitampura" },
+              { label: "Gurgaon" },
+              { label: "Noida" },
+              { label: "Faridabad" },
+              { label: "Ghaziabad" },
+            ].map((area, i) => {
+              const content = (
+                <>
+                  <MapPin className="w-3 h-3 inline mr-1 text-primary" />{area.label}
+                </>
+              );
+
+              return (
+                <motion.div
+                  key={area.label}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.04 }}
+                >
+                  {area.to ? (
+                    <Link
+                      to={area.to}
+                      className="bg-white border border-gray-200 rounded-lg px-4 py-2.5 text-center text-gray-700 text-sm font-medium hover:border-primary hover:text-primary transition-colors block"
+                    >
+                      {content}
+                    </Link>
+                  ) : (
+                    <div className="bg-white border border-gray-200 rounded-lg px-4 py-2.5 text-center text-gray-700 text-sm font-medium">
+                      {content}
+                    </div>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -12,6 +12,17 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Gallery from "@/pages/Gallery";
 import Contact from "@/pages/Contact";
+import Nebsarai from "@/pages/locations/Nebsarai";
+import Saket from "@/pages/locations/Saket";
+import MalviyaNagar from "@/pages/locations/MalviyaNagar";
+import GreenPark from "@/pages/locations/GreenPark";
+import HauzKhas from "@/pages/locations/HauzKhas";
+import Ghitorni from "@/pages/locations/Ghitorni";
+import VasantKunj from "@/pages/locations/VasantKunj";
+import Chhatarpur from "@/pages/locations/Chhatarpur";
+import Rajpur from "@/pages/locations/Rajpur";
+import Sultanpur from "@/pages/locations/Sultanpur";
+import Khanpur from "@/pages/locations/Khanpur";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +53,17 @@ function AnimatedRoutes() {
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/locations/nebsarai" element={<Nebsarai />} />
+            <Route path="/locations/saket" element={<Saket />} />
+            <Route path="/locations/malviya-nagar" element={<MalviyaNagar />} />
+            <Route path="/locations/green-park" element={<GreenPark />} />
+            <Route path="/locations/hauz-khas" element={<HauzKhas />} />
+            <Route path="/locations/ghitorni" element={<Ghitorni />} />
+            <Route path="/locations/vasant-kunj" element={<VasantKunj />} />
+            <Route path="/locations/chhatarpur" element={<Chhatarpur />} />
+            <Route path="/locations/rajpur" element={<Rajpur />} />
+            <Route path="/locations/sultanpur" element={<Sultanpur />} />
+            <Route path="/locations/khanpur" element={<Khanpur />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
