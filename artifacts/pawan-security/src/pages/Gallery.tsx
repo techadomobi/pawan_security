@@ -171,6 +171,30 @@ const IconForCategory = (category: string) => {
   }
 };
 
+const cityLinks: Record<string, string> = {
+  "Chhatarpur": "/chhatarpur",
+  "Saket": "/saket",
+  "Hauz Khas": "/hauz-khas",
+  "Vasant Kunj": "/vasant-kunj",
+  "Malviya Nagar": "/malviya-nagar",
+};
+
+function CityLink({ text }: { text: string }) {
+  const route = Object.entries(cityLinks).find(([city]) => text.includes(city))?.[1];
+
+  if (!route) {
+    return <span>{text}</span>;
+  }
+
+  const cityName = Object.keys(cityLinks).find((city) => text.includes(city)) ?? text;
+
+  return (
+    <Link to={route} className="hover:underline underline-offset-2">
+      {text.replace(cityName, cityName)}
+    </Link>
+  );
+}
+
 export default function Gallery() {
   const [active, setActive] = useState("All");
 
@@ -290,7 +314,7 @@ export default function Gallery() {
                   <div className="bg-white p-5 sm:p-6">
                     <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">{project.title}</h3>
                     <div className="flex items-center gap-1.5 text-primary text-sm font-medium mb-3">
-                      <MapPin className="w-3.5 h-3.5" /> {project.location}
+                      <MapPin className="w-3.5 h-3.5" /> <CityLink text={project.location} />
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
@@ -347,7 +371,9 @@ export default function Gallery() {
                   </div>
                   <div>
                     <div className="font-bold text-gray-900 text-sm">{review.name}</div>
-                    <div className="text-gray-500 text-xs">{review.role}</div>
+                    <div className="text-gray-500 text-xs">
+                      <CityLink text={review.role} />
+                    </div>
                   </div>
                 </div>
               </motion.div>

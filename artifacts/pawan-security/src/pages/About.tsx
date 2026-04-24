@@ -51,9 +51,17 @@ const teamMembers = [
 ];
 
 const coverageAreas = [
-  "Chhatarpur", "Saket", "Vasant Kunj", "Vasant Vihar", "Mehrauli", "Dwarka",
-  "Lajpat Nagar", "Greater Kailash", "Malviya Nagar", "Hauz Khas", "South Extension",
-  "Connaught Place", "Okhla", "Noida", "Gurgaon", "Faridabad", "Rohini", "Pitampura"
+  { label: "Neb Sarai", to: "/nebsarai" },
+  { label: "Chhatarpur", to: "/chhatarpur" },
+  { label: "Saket", to: "/saket" },
+  { label: "Green Park", to: "/green-park" },
+  { label: "Vasant Kunj", to: "/vasant-kunj" },
+  { label: "Hauz Khas", to: "/hauz-khas" },
+  { label: "Ghitorni", to: "/ghitorni" },
+  { label: "Malviya Nagar", to: "/malviya-nagar" },
+  { label: "Rajpur", to: "/rajpur" },
+  { label: "Sultanpur", to: "/sultanpur" },
+  { label: "Khanpur", to: "/khanpur" },
 ];
 
 const faqs = [
@@ -339,16 +347,20 @@ export default function About() {
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {coverageAreas.map((area, i) => (
-              <motion.span
-                key={i}
+              <motion.div
+                key={area.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04 }}
-                className="flex items-center gap-1.5 bg-white border border-gray-200 px-4 py-2 rounded-full text-gray-700 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
               >
-                <MapPin className="w-3 h-3 text-primary" /> {area}
-              </motion.span>
+                <Link
+                  to={area.to}
+                  className="flex items-center gap-1.5 bg-white border border-gray-200 px-4 py-2 rounded-full text-gray-700 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+                >
+                  <MapPin className="w-3 h-3 text-primary" /> {area.label}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
