@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -53,17 +53,28 @@ function AnimatedRoutes() {
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/locations/nebsarai" element={<Nebsarai />} />
-            <Route path="/locations/saket" element={<Saket />} />
-            <Route path="/locations/malviya-nagar" element={<MalviyaNagar />} />
-            <Route path="/locations/green-park" element={<GreenPark />} />
-            <Route path="/locations/hauz-khas" element={<HauzKhas />} />
-            <Route path="/locations/ghitorni" element={<Ghitorni />} />
-            <Route path="/locations/vasant-kunj" element={<VasantKunj />} />
-            <Route path="/locations/chhatarpur" element={<Chhatarpur />} />
-            <Route path="/locations/rajpur" element={<Rajpur />} />
-            <Route path="/locations/sultanpur" element={<Sultanpur />} />
-            <Route path="/locations/khanpur" element={<Khanpur />} />
+            <Route path="/nebsarai" element={<Nebsarai />} />
+            <Route path="/saket" element={<Saket />} />
+            <Route path="/malviya-nagar" element={<MalviyaNagar />} />
+            <Route path="/green-park" element={<GreenPark />} />
+            <Route path="/hauz-khas" element={<HauzKhas />} />
+            <Route path="/ghitorni" element={<Ghitorni />} />
+            <Route path="/vasant-kunj" element={<VasantKunj />} />
+            <Route path="/chhatarpur" element={<Chhatarpur />} />
+            <Route path="/rajpur" element={<Rajpur />} />
+            <Route path="/sultanpur" element={<Sultanpur />} />
+            <Route path="/khanpur" element={<Khanpur />} />
+            <Route path="/locations/nebsarai" element={<Navigate to="/nebsarai" replace />} />
+            <Route path="/locations/saket" element={<Navigate to="/saket" replace />} />
+            <Route path="/locations/malviya-nagar" element={<Navigate to="/malviya-nagar" replace />} />
+            <Route path="/locations/green-park" element={<Navigate to="/green-park" replace />} />
+            <Route path="/locations/hauz-khas" element={<Navigate to="/hauz-khas" replace />} />
+            <Route path="/locations/ghitorni" element={<Navigate to="/ghitorni" replace />} />
+            <Route path="/locations/vasant-kunj" element={<Navigate to="/vasant-kunj" replace />} />
+            <Route path="/locations/chhatarpur" element={<Navigate to="/chhatarpur" replace />} />
+            <Route path="/locations/rajpur" element={<Navigate to="/rajpur" replace />} />
+            <Route path="/locations/sultanpur" element={<Navigate to="/sultanpur" replace />} />
+            <Route path="/locations/khanpur" element={<Navigate to="/khanpur" replace />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
