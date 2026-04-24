@@ -5,7 +5,7 @@
   "outputDirectory": "artifacts/pawan-security/dist/public",
   "rewrites": [
     {
-      "source": "/((?!.*\\..*).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
