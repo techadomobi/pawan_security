@@ -12,7 +12,7 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Gallery from "@/pages/Gallery";
 import Contact from "@/pages/Contact";
-import Nebsarai from "@/pages/locations/Nebsarai";
+import Nebsarai from /locations/Nebsarai";
 import Saket from "@/pages/locations/Saket";
 import MalviyaNagar from "@/pages/locations/MalviyaNagar";
 import GreenPark from "@/pages/locations/GreenPark";
