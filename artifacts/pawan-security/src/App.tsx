@@ -53,17 +53,6 @@ function AnimatedRoutes() {
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/nebsarai-delhi" element={<Nebsarai />} />
-            <Route path="/saket-delhi" element={<Saket />} />
-            <Route path="/malviya-nagar-delhi" element={<MalviyaNagar />} />
-            <Route path="/green-park-delhi" element={<GreenPark />} />
-            <Route path="/hauz-khas-delhi" element={<HauzKhas />} />
-            <Route path="/ghitorni-delhi" element={<Ghitorni />} />
-            <Route path="/vasant-kunj-delhi" element={<VasantKunj />} />
-            <Route path="/chhatarpur-delhi" element={<Chhatarpur />} />
-            <Route path="/rajpur-delhi" element={<Rajpur />} />
-            <Route path="/sultanpur-delhi" element={<Sultanpur />} />
-            <Route path="/khanpur-delhi" element={<Khanpur />} />
             <Route path="/nebsarai-delhi" element={<Navigate to="/nebsarai-delhi" replace />} />
             <Route path="/saket-delhi" element={<Navigate to="/saket-delhi" replace />} />
             <Route path="/malviya-nagar-delhi" element={<Navigate to="/malviya-nagar-delhi" replace />} />
