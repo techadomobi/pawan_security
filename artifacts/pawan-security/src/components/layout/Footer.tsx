@@ -10,7 +10,7 @@ export function Footer() {
             <img
               src="/logo.png"
               alt="Smart CCTV India"
-              className="h-20 w-auto"
+              className="h-28 w-auto"
             />
           </Link>
           <p className="text-gray-400 mb-6 max-w-md">
