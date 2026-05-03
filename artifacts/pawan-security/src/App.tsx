@@ -32,6 +32,20 @@ const pageVariants = {
   exit: { opacity: 0, y: -16, transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } },
 };
 
+const cityRoutes = [
+  { delhiPath: "/nebsarai-delhi", legacyPath: "/nebsarai", element: <Nebsarai /> },
+  { delhiPath: "/saket-delhi", legacyPath: "/saket", element: <Saket /> },
+  { delhiPath: "/malviya-nagar-delhi", legacyPath: "/malviya-nagar", element: <MalviyaNagar /> },
+  { delhiPath: "/green-park-delhi", legacyPath: "/green-park", element: <GreenPark /> },
+  { delhiPath: "/hauz-khas-delhi", legacyPath: "/hauz-khas", element: <HauzKhas /> },
+  { delhiPath: "/ghitorni-delhi", legacyPath: "/ghitorni", element: <Ghitorni /> },
+  { delhiPath: "/vasant-kunj-delhi", legacyPath: "/vasant-kunj", element: <VasantKunj /> },
+  { delhiPath: "/chhatarpur-delhi", legacyPath: "/chhatarpur", element: <Chhatarpur /> },
+  { delhiPath: "/rajpur-delhi", legacyPath: "/rajpur", element: <Rajpur /> },
+  { delhiPath: "/sultanpur-delhi", legacyPath: "/sultanpur", element: <Sultanpur /> },
+  { delhiPath: "/khanpur-delhi", legacyPath: "/khanpur", element: <Khanpur /> },
+];
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -53,17 +67,16 @@ function AnimatedRoutes() {
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/nebsarai-delhi" element={<Navigate to="/nebsarai" replace />} />
-            <Route path="/saket-delhi" element={<Navigate to="/saket" replace />} />
-            <Route path="/malviya-nagar-delhi" element={<Navigate to="/malviya-nagar" replace />} />
-            <Route path="/green-park-delhi" element={<Navigate to="/green-park" replace />} />
-            <Route path="/hauz-khas-delhi" element={<Navigate to="/hauz-khas" replace />} />
-            <Route path="/ghitorni-delhi" element={<Navigate to="/ghitorni" replace />} />
-            <Route path="/vasant-kunj-delhi" element={<Navigate to="/vasant-kunj" replace />} />
-            <Route path="/chhatarpur-delhi" element={<Navigate to="/chhatarpur" replace />} />
-            <Route path="/rajpur-delhi" element={<Navigate to="/rajpur" replace />} />
-            <Route path="/sultanpur-delhi" element={<Navigate to="/sultanpur" replace />} />
-            <Route path="/khanpur-delhi" element={<Navigate to="/khanpur" replace />} />
+            {cityRoutes.map((city) => (
+              <Route key={city.delhiPath} path={city.delhiPath} element={city.element} />
+            ))}
+            {cityRoutes.map((city) => (
+              <Route
+                key={city.legacyPath}
+                path={city.legacyPath}
+                element={<Navigate to={city.delhiPath} replace />}
+              />
+            ))}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
