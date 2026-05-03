@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -35,12 +35,11 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 z-50 group">
-          <div className="bg-primary text-primary-foreground p-2 rounded-lg group-hover:scale-105 transition-transform">
-            <Shield className="w-6 h-6" />
-          </div>
-          <span className={`font-bold text-base sm:text-xl tracking-tight transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-            Smart CCTV India
-          </span>
+          <img
+            src={isScrolled ? "/logo.png" : "/logo_white_sm.png"}
+            alt="Smart CCTV India"
+            className="h-11 w-auto transition-transform duration-300 group-hover:scale-105 sm:h-12"
+          />
         </Link>
 
         {/* Desktop Nav */}
