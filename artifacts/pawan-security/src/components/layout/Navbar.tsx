@@ -34,11 +34,12 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 z-50 group">
+        <Link to="/" className="flex items-center gap-2 z-50 group h-12">
           <img
             src={isScrolled ? "/logo_white_sm.png" : "/logo.png"}
             alt="Smart CCTV India"
-            className="h-44 w-auto transition-transform duration-300 group-hover:scale-105 sm:h-40"
+            style={{ transform: "scale(1.8)", transformOrigin: "left center" }}
+            className="h-full w-auto transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 
