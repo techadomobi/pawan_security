@@ -456,17 +456,17 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {[
-              { label: "Neb Sarai", to: "/nebsarai" },
-              { label: "Chhatarpur", to: "/chhatarpur" },
-              { label: "Saket", to: "/saket" },
-              { label: "Green Park", to: "/green-park" },
-              { label: "Vasant Kunj", to: "/vasant-kunj" },
-              { label: "Hauz Khas", to: "/hauz-khas" },
-              { label: "Ghitorni", to: "/ghitorni" },
-              { label: "Malviya Nagar", to: "/malviya-nagar" },
-              { label: "Rajpur", to: "/rajpur" },
-              { label: "Sultanpur", to: "/sultanpur" },
-              { label: "Khanpur", to: "/khanpur" },
+              { label: "Neb Sarai-delhi", to: "/nebsarai-delhi" },
+              { label: "Chhatarpur-delhi", to: "/chhatarpur-delhi" },
+              { label: "Saket-delhi", to: "/saket-delhi" },
+              { label: "Green Park-delhi", to: "/green-park-delhi" },
+              { label: "Vasant Kunj-delhi", to: "/vasant-kunj-delhi" },
+              { label: "Hauz Khas-delhi", to: "/hauz-khas-delhi" },
+              { label: "Ghitorni-delhi", to: "/ghitorni-delhi" },
+              { label: "Malviya Nagar-delhi", to: "/malviya-nagar-delhi" },
+              { label: "Rajpur-delhi", to: "/rajpur-delhi" },
+              { label: "Sultanpur-delhi", to: "/sultanpur-delhi" },
+              { label: "Khanpur-delhi", to: "/khanpur-delhi" },
             ].map((area, i) => {
               const content = (
                 <>
