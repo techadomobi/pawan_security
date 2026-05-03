@@ -14,14 +14,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "gaytrisecuitysolution1@gmail.com",
-    link: "mailto:gaytrisecuitysolution1@gmail.com",
+    value: "connect@smartcctvindia.com",
+    link: "mailto:connect@smartcctvindia.com",
     linkLabel: "Send Email"
   },
   {
     icon: MapPin,
     title: "Address",
-    value: "No-100, 39 Khasra, Mittal Garden, Chhatarpur, Pahari, New Delhi, Delhi 110074",
+    value: "B 452 Vasant kunj enclave, Delhi, India 110070",
     link: "https://maps.google.com/?q=Chhatarpur+Pahari+New+Delhi",
     linkLabel: "Get Directions"
   },

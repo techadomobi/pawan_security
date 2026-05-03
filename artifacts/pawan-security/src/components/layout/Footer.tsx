@@ -42,11 +42,11 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-              <span className="break-all">gaytrisecuitysolution1@gmail.com</span>
+              <span className="break-all">connect@smartcctvindia.com</span>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-              <span>No-100, 39 Khasra, Mittal Garden, Chhatarpur, Pahari, New Delhi, Delhi 110074</span>
+              <span>B 452 Vasant kunj enclave, Delhi, India 110070</span>
             </li>
           </ul>
         </div>
