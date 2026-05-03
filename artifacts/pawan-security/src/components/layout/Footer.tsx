@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Phone, Mail, MapPin } from "lucide-react";
-import logo from "public/logo.png";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,12 +7,11 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2">
           <Link to="/" className="flex items-center gap-2 mb-6">
-            <div className="bg-primary text-primary-foreground p-2 rounded-lg">
-              <Shield className="w-6 h-6" />
-            </div>
-            <span className="font-bold text-2xl tracking-tight text-white">
-              {logo}
-            </span>
+            <img
+              src="/logo_white_sm.png"
+              alt="Smart CCTV India"
+              className="h-12 w-auto"
+            />
           </Link>
           <p className="text-gray-400 mb-6 max-w-md">
             Trusted CCTV Experts for Complete Security. We protect homes, offices, and commercial spaces with professional installation, repair, and monitoring services across Delhi.
