@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield, Phone, Mail, MapPin } from "lucide-react";
-import 
+import logo from "public/logo.png";
 
 export function Footer() {
   return (
@@ -12,7 +12,7 @@ export function Footer() {
               <Shield className="w-6 h-6" />
             </div>
             <span className="font-bold text-2xl tracking-tight text-white">
-              Smart CCTV India
+              {logo}
             </span>
           </Link>
           <p className="text-gray-400 mb-6 max-w-md">
