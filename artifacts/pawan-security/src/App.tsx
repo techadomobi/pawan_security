@@ -53,28 +53,28 @@ function AnimatedRoutes() {
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/nebsarai" element={<Nebsarai />} />
-            <Route path="/saket" element={<Saket />} />
-            <Route path="/malviya-nagar" element={<MalviyaNagar />} />
-            <Route path="/green-park" element={<GreenPark />} />
-            <Route path="/hauz-khas" element={<HauzKhas />} />
-            <Route path="/ghitorni" element={<Ghitorni />} />
-            <Route path="/vasant-kunj" element={<VasantKunj />} />
-            <Route path="/chhatarpur" element={<Chhatarpur />} />
-            <Route path="/rajpur" element={<Rajpur />} />
-            <Route path="/sultanpur" element={<Sultanpur />} />
-            <Route path="/khanpur" element={<Khanpur />} />
-            <Route path="/nebsarai" element={<Navigate to="/nebsarai" replace />} />
-            <Route path="/saket" element={<Navigate to="/saket" replace />} />
-            <Route path="/malviya-nagar" element={<Navigate to="/malviya-nagar" replace />} />
-            <Route path="/green-park" element={<Navigate to="/green-park" replace />} />
-            <Route path="/hauz-khas" element={<Navigate to="/hauz-khas" replace />} />
-            <Route path="/ghitorni" element={<Navigate to="/ghitorni" replace />} />
-            <Route path="/vasant-kunj" element={<Navigate to="/vasant-kunj" replace />} />
-            <Route path="/chhatarpur" element={<Navigate to="/chhatarpur" replace />} />
-            <Route path="/rajpur" element={<Navigate to="/rajpur" replace />} />
-            <Route path="/sultanpur" element={<Navigate to="/sultanpur" replace />} />
-            <Route path="/khanpur" element={<Navigate to="/khanpur" replace />} />
+            <Route path="/nebsarai-delhi" element={<Nebsarai />} />
+            <Route path="/saket-delhi" element={<Saket />} />
+            <Route path="/malviya-nagar-delhi" element={<MalviyaNagar />} />
+            <Route path="/green-park-delhi" element={<GreenPark />} />
+            <Route path="/hauz-khas-delhi" element={<HauzKhas />} />
+            <Route path="/ghitorni-delhi" element={<Ghitorni />} />
+            <Route path="/vasant-kunj-delhi" element={<VasantKunj />} />
+            <Route path="/chhatarpur-delhi" element={<Chhatarpur />} />
+            <Route path="/rajpur-delhi" element={<Rajpur />} />
+            <Route path="/sultanpur-delhi" element={<Sultanpur />} />
+            <Route path="/khanpur-delhi" element={<Khanpur />} />
+            <Route path="/nebsarai-delhi" element={<Navigate to="/nebsarai-delhi" replace />} />
+            <Route path="/saket-delhi" element={<Navigate to="/saket-delhi" replace />} />
+            <Route path="/malviya-nagar-delhi" element={<Navigate to="/malviya-nagar-delhi" replace />} />
+            <Route path="/green-park-delhi" element={<Navigate to="/green-park-delhi" replace />} />
+            <Route path="/hauz-khas-delhi" element={<Navigate to="/hauz-khas-delhi" replace />} />
+            <Route path="/ghitorni-delhi" element={<Navigate to="/ghitorni-delhi" replace />} />
+            <Route path="/vasant-kunj-delhi" element={<Navigate to="/vasant-kunj-delhi" replace />} />
+            <Route path="/chhatarpur-delhi" element={<Navigate to="/chhatarpur-delhi" replace />} />
+            <Route path="/rajpur-delhi" element={<Navigate to="/rajpur-delhi" replace />} />
+            <Route path="/sultanpur-delhi" element={<Navigate to="/sultanpur-delhi" replace />} />
+            <Route path="/khanpur-delhi" element={<Navigate to="/khanpur-delhi" replace />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
