@@ -51,17 +51,17 @@ const teamMembers = [
 ];
 
 const coverageAreas = [
-  { label: "Neb Sarai", to: "/nebsarai" },
-  { label: "Chhatarpur", to: "/chhatarpur" },
-  { label: "Saket", to: "/saket" },
-  { label: "Green Park", to: "/green-park" },
-  { label: "Vasant Kunj", to: "/vasant-kunj" },
-  { label: "Hauz Khas", to: "/hauz-khas" },
-  { label: "Ghitorni", to: "/ghitorni" },
-  { label: "Malviya Nagar", to: "/malviya-nagar" },
-  { label: "Rajpur", to: "/rajpur" },
-  { label: "Sultanpur", to: "/sultanpur" },
-  { label: "Khanpur", to: "/khanpur" },
+  { label: "Neb Sarai", to: "/nebsarai-delhi" },
+  { label: "Chhatarpur", to: "/chhatarpur-delhi" },
+  { label: "Saket", to: "/saket-delhi" },
+  { label: "Green Park", to: "/green-park-delhi" },
+  { label: "Vasant Kunj", to: "/vasant-kunj-delhi" },
+  { label: "Hauz Khas", to: "/hauz-khas-delhi" },
+  { label: "Ghitorni", to: "/ghitorni-delhi" },
+  { label: "Malviya Nagar", to: "/malviya-nagar-delhi" },
+  { label: "Rajpur", to: "/rajpur-delhi" },
+  { label: "Sultanpur", to: "/sultanpur-delhi" },
+  { label: "Khanpur", to: "/khanpur-delhi" },
 ];
 
 const faqs = [
