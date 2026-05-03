@@ -8,7 +8,7 @@ export function Footer() {
         <div className="col-span-1 md:col-span-2">
           <Link to="/" className="flex items-center gap-2 mb-6">
             <img
-              src="/logo_white_sm.png"
+              src="/logo.png"
               alt="Smart CCTV India"
               className="h-12 w-auto"
             />
