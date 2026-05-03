@@ -39,7 +39,7 @@ export function Navbar() {
             src={isScrolled ? "/logo_white_sm.png" : "/logo.png"}
             alt="Smart CCTV India"
             style={{ transform: "scale(1.8)", transformOrigin: "left center" }}
-            className="h-full w-auto transition-transform duration-300 group-hover:scale-105"
+            className="h-44 w-auto transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 
