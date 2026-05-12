@@ -8,6 +8,8 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/blog", label: "Blog" },
+  { href: "/security-guide", label: "Security Guide" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
@@ -38,7 +40,7 @@ export function Navbar() {
           <img
             src={isScrolled ? "/logo_white_sm.png" : "/logo.png"}
             alt="Smart CCTV India"
-            className="h-44 w-auto transition-transform duration-300 group-hover:scale-105"
+            className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 

@@ -12,6 +12,9 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Gallery from "@/pages/Gallery";
 import Contact from "@/pages/Contact";
+import Blog from "@/pages/Blog";
+import SecurityGuide from "@/pages/SecurityGuide";
+import Resources from "@/pages/Resources";
 import Nebsarai from "@/pages/locations/Nebsarai";
 import Saket from "@/pages/locations/Saket";
 import MalviyaNagar from "@/pages/locations/MalviyaNagar";
@@ -65,6 +68,9 @@ function AnimatedRoutes() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/security-guide" element={<SecurityGuide />} />
+            <Route path="/resources" element={<Resources />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             {cityRoutes.map((city) => (
