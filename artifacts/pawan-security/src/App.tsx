@@ -13,6 +13,9 @@ import Services from "@/pages/Services";
 import Gallery from "@/pages/Gallery";
 import Contact from "@/pages/Contact";
 import Blog from "@/pages/Blog";
+import ComprehensiveSecuritySolutions from "@/pages/ComprehensiveSecuritySolutions";
+import CctvInstallationRepair from "@/pages/CctvInstallationRepair";
+import WirelessSecurityMonitoring from "@/pages/WirelessSecurityMonitoring";
 import SecurityGuide from "@/pages/SecurityGuide";
 import Resources from "@/pages/Resources";
 import Nebsarai from "@/pages/locations/Nebsarai";
@@ -69,6 +72,9 @@ function AnimatedRoutes() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/comprehensive-security-solutions" element={<ComprehensiveSecuritySolutions />} />
+            <Route path="/cctv-installation-repair" element={<CctvInstallationRepair />} />
+            <Route path="/wireless-security-monitoring" element={<WirelessSecurityMonitoring />} />
             <Route path="/security-guide" element={<SecurityGuide />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/gallery" element={<Gallery />} />
