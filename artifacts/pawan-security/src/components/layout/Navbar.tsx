@@ -40,7 +40,7 @@ export function Navbar() {
           <img
             src={isScrolled ? "/logo_white_sm.png" : "/logo.png"}
             alt="Smart CCTV India"
-            className="h-11 w-auto transition-all duration-300 group-hover:scale-110 drop-shadow-sm"
+            className="h-44 w-auto transition-all duration-300 group-hover:scale-110 drop-shadow-sm"
           />
         </Link>
 
