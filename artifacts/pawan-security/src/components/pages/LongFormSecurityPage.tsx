@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -68,6 +68,24 @@ export function LongFormSecurityPage({ data }: { data: LongFormSecurityPageData 
     { href: "#process", label: "Process" },
     { href: "#faq", label: "FAQ" },
   ];
+  const [active, setActive] = useState<string>("#overview");
+
+  useEffect(() => {
+    const ids = sectionLinks.map((s) => s.href);
+    const handler = () => {
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.querySelector(id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= 120) current = id;
+      }
+      setActive(current);
+    };
+    handler();
+    window.addEventListener("scroll", handler, { passive: true });
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
 
   return (
     <div className="bg-slate-950 text-slate-50">
@@ -103,7 +121,7 @@ export function LongFormSecurityPage({ data }: { data: LongFormSecurityPageData 
 
               <div className="mt-7 flex flex-wrap gap-3">
                 {data.keywordChips.map((chip) => (
-                  <span key={chip} className="rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-medium text-white/90 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-0.5 hover:bg-white/12 sm:text-sm">
+                  <span key={chip} className="rounded-full px-4 py-2 text-xs font-semibold text-slate-900 bg-amber-300/95 shadow-sm sm:text-sm">
                     {chip}
                   </span>
                 ))}
@@ -111,9 +129,9 @@ export function LongFormSecurityPage({ data }: { data: LongFormSecurityPageData 
 
               <div className="mt-8 grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:gap-6">
                 {data.metrics.map((metric, index) => (
-                  <motion.div key={metric.label} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 + index * 0.06 }} className="rounded-3xl border border-white/10 bg-white/6 px-5 py-4 text-white/90 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] backdrop-blur-md">
+                  <motion.div key={metric.label} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 + index * 0.06 }} className="rounded-3xl px-5 py-4 text-white/95 shadow-lg backdrop-blur-md bg-gradient-to-r from-white/6 to-white/4 border border-white/6">
                     <div className="text-2xl font-black text-white sm:text-3xl">{metric.value}</div>
-                    <div className="mt-1 text-[11px] uppercase tracking-[0.22em] text-white/60 sm:text-sm">{metric.label}</div>
+                    <div className="mt-1 text-[11px] uppercase tracking-[0.22em] text-white/70 sm:text-sm">{metric.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -162,9 +180,9 @@ export function LongFormSecurityPage({ data }: { data: LongFormSecurityPageData 
           <div className="flex items-center gap-2 text-sm font-semibold text-white/80">
             <Sparkles className="h-4 w-4 text-cyan-300" /> Explore the page
           </div>
-          <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
             {sectionLinks.map((link) => (
-              <a key={link.href} href={link.href} className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/80 transition-colors hover:bg-white/12 hover:text-white sm:text-sm">
+              <a key={link.href} href={link.href} className={`rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition-colors sm:text-sm ${active===link.href? 'bg-cyan-400 text-slate-950 border border-cyan-500' : 'bg-white/6 text-white/80 border border-white/10 hover:bg-white/12'}`}>
                 {link.label}
               </a>
             ))}
