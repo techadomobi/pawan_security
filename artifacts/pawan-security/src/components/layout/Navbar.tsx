@@ -18,6 +18,8 @@ export function Navbar() {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const forceOpaquePaths = ["/blog", "/security-guide"];
+  const forceOpaque = forceOpaquePaths.some((p) => location.pathname.startsWith(p));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +32,9 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        forceOpaque
+          ? "bg-cyan-900/95 backdrop-blur-md shadow-xl border-b border-cyan-800 py-3"
+          : isScrolled
           ? "bg-white/98 backdrop-blur-lg shadow-xl border-b border-gray-300 py-3"
           : "bg-linear-to-r from-black/50 via-black/40 to-transparent backdrop-blur-md py-4 border-b border-white/10"
       }`}
@@ -38,7 +42,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 z-50 group h-11 shrink-0">
           <img
-            src={isScrolled ? "/logo_white_sm.png" : "/logo.png"}
+            src={forceOpaque || isScrolled ? "/logo_white_sm.png" : "/logo.png"}
             alt="Smart CCTV India"
             className="h-44 w-auto transition-all duration-300 group-hover:scale-110 drop-shadow-sm"
           />
@@ -52,8 +56,12 @@ export function Navbar() {
               to={link.href}
               className={`relative px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
                 location.pathname === link.href
-                  ? "text-cyan-500 bg-cyan-500/15"
-                  : isScrolled ? "text-slate-700 hover:bg-slate-100 hover:text-cyan-600" : "text-white/90 hover:bg-white/10 hover:text-cyan-300"
+                  ? (forceOpaque ? "text-amber-100 bg-amber-600/10" : "text-cyan-500 bg-cyan-500/15")
+                  : forceOpaque
+                  ? "text-white/95 hover:bg-white/5 hover:text-amber-100"
+                  : isScrolled
+                  ? "text-slate-700 hover:bg-slate-100 hover:text-cyan-600"
+                  : "text-white/90 hover:bg-white/10 hover:text-cyan-300"
               }`}
             >
               {link.label}
@@ -69,7 +77,9 @@ export function Navbar() {
           ))}
           <div className="ml-4 lg:ml-6 border-l border-white/10"></div>
           <Button asChild className={`ml-4 lg:ml-6 h-10 px-7 font-semibold transition-all duration-200 ${
-            isScrolled 
+            forceOpaque
+              ? "bg-amber-500 text-slate-950 hover:bg-amber-400 shadow-lg"
+              : isScrolled 
               ? "bg-linear-to-r from-cyan-500 to-cyan-600 text-white hover:shadow-lg hover:from-cyan-600 hover:to-cyan-700" 
               : "bg-cyan-400 text-slate-900 hover:bg-cyan-300 shadow-lg hover:shadow-xl"
           }`}>
